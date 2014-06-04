@@ -17,6 +17,12 @@
             <dt>Availability</dt>
             <dd ng-repeat="availability in phone.availability">{{availability}}</dd>
         </dl>
+        <dl>
+            <dt>Infrared</dt>
+            <dd>{{phone.connectivity.infrared | checkmark}}</dd>
+            <dt>GPS</dt>
+            <dd>{{phone.connectivity.gps | checkmark}}</dd>
+        </dl>
     </li>
     ...
     <li>
@@ -24,3 +30,8 @@
         <dd>{{phone.additionalFeatures}}</dd>
     </li>
 </ul>
+
+{{ "lower cap string" | uppercase }}
+{{ {foo: "bar", baz: 23} | json }}
+{{ 1304375948024 | date }}
+{{ 1304375948024 | date:"MM/dd/yyyy @ h:mma" }}
